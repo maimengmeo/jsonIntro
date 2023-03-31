@@ -10,5 +10,5 @@ export class JsonListComponent {
   @Input() courses!: Courses[];
   @Input() cphead!: CPHead;
 
-  displayedColumns: string[] = ["term", "class", "credit", "description"]
+  displayedColumns: string[] = ["term", "class", "description", "credit"]
 }
