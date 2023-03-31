@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CPHead, Courses } from '../cpinterfaces';
 
 @Component({
   selector: 'app-json-buttons',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./json-buttons.component.css']
 })
 export class JsonButtonsComponent {
-
+  @Input() courses!: Courses[];
+  @Input() cphead!: CPHead;
 }

@@ -5,9 +5,9 @@
 		[ngStyle]="{textAlign: 'center'}">
 
     <mat-tab label="List of JSON file courses">
-      <app-json-list></app-json-list>
+      <app-json-list [courses]="courses" [cphead]="cphead"></app-json-list>
     </mat-tab>
     <mat-tab label="Buttons to find JSON data">
-      <app-json-buttons></app-json-buttons>
+      <app-json-buttons [courses]="courses" [cphead]="cphead"></app-json-buttons>
     </mat-tab>
 </mat-tab-group>

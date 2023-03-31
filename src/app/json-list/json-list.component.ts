@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Courses, CPHead } from '../cpinterfaces';
 
 @Component({
   selector: 'app-json-list',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./json-list.component.css']
 })
 export class JsonListComponent {
-
+  @Input() courses!: Courses[];
+  @Input() cphead!: CPHead;
 }
