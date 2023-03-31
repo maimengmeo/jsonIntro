@@ -17,7 +17,7 @@ import { MaterialModule } from './modules/material-ui/material-ui.model';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MaterialModules
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
