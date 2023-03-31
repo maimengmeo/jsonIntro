@@ -1,1 +1,8 @@
-<p>json-buttons works!</p>
+<button mat-raised-button color="primary" (click)="displayTerm(1)">
+    CP Term 1
+</button>
+<hr>
+
+<div id="list">
+    <p [innerHTML]="outarea"></p>
+</div>

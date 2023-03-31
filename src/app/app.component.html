@@ -7,7 +7,19 @@
     <mat-tab label="List of JSON file courses">
       <app-json-list [courses]="courses" [cphead]="cphead"></app-json-list>
     </mat-tab>
+
     <mat-tab label="Buttons to find JSON data">
       <app-json-buttons [courses]="courses" [cphead]="cphead"></app-json-buttons>
+    </mat-tab>
+
+    <mat-tab label="ngFor with ngIf">
+      <h3>Using ngFor and ngIf in HTML to show only Term 1 Classes</h3>
+      <!-- ngFor must be on the container tag and the ngIf on the child tag -->
+
+      <div *ngFor="let x of courses">
+        <p *ngIf="(x.term) === 1">
+          Class: {{x.class}}/ Description: {{x.description}}
+        </p>
+      </div>
     </mat-tab>
 </mat-tab-group>
