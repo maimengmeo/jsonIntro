@@ -1,1 +1,37 @@
-<p>{{cphead.programName}}</p>
+<h4 [ngStyle]="{color: 'white', backgroundColor: 'navy'}">
+    {{cphead.programName}} is a {{cphead.credential}} <br>
+    {{cphead.schedule}}
+</h4>
+
+<!-- <ul>
+    <li *ngFor="let x of courses">
+        Class: {{x.class}}
+    </li>
+</ul> -->
+
+<!-- angular material table from jsonIntro.txt -->
+<table mat-table [dataSource]="courses" class="mat-elevation-z8">
+    <ng-container matColumnDef="term">  
+    <th mat-header-cell *matHeaderCellDef>TERM</th>
+    <td mat-cell *matCellDef="let x"> {{x.term}} </td>
+    </ng-container>
+      
+      <!-- Include other rows -->
+    <ng-container matColumnDef="class">  
+    <th mat-header-cell *matHeaderCellDef>CLASS NAME</th>
+    <td mat-cell *matCellDef="let x"> {{x.class}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="credit">  
+    <th mat-header-cell *matHeaderCellDef>CREDIT</th>
+    <td mat-cell *matCellDef="let x"> {{x.credit}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">  
+    <th mat-header-cell *matHeaderCellDef>DESCRIPTION</th>
+    <td mat-cell *matCellDef="let x"> {{x.description}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> <!-- Declar var in .ts -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

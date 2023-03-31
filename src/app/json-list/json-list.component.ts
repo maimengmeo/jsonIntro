@@ -9,4 +9,6 @@ import { Courses, CPHead } from '../cpinterfaces';
 export class JsonListComponent {
   @Input() courses!: Courses[];
   @Input() cphead!: CPHead;
+
+  displayedColumns: string[] = ["term", "class", "credit", "description"]
 }
